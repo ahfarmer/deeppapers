@@ -13,7 +13,7 @@ class BlogPostTemplate extends React.Component {
     const siteTitle = get(this.props, "data.site.siteMetadata.title")
     const siteDescription = post.excerpt
     const { previous, next } = this.props.pageContext
-    const tags = (post.frontmatter.keywords || "").split(",").map(x => x.trim())
+    const tags = (post.frontmatter.tags || "").split(",").map(x => x.trim())
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -34,24 +34,28 @@ class BlogPostTemplate extends React.Component {
           {post.frontmatter.date}
         </p>
         <p>
-          These are my notes on "{post.frontmatter.title}", a paper by:{" "}
-          {post.frontmatter.authors}. <a href={post.frontmatter.link}>Paper</a>{" "}
-          <a href={post.frontmatter.pdflink}>PDF</a>
+          These are my notes on <i>{post.frontmatter.paper_title}</i> by{" "}
+          <i>{post.frontmatter.paper_authors}.</i>{" "}
+          <a href={post.frontmatter.paper_link}>Paper</a>{" "}
+          <a href={post.frontmatter.paper_pdf}>PDF</a>
+          <span style={{ display: "inline-flex", marginLeft: 10 }}>
+            {tags.map(tag => (
+              <span
+                key={tag}
+                style={{
+                  fontSize: 10,
+                  color: "#aaa",
+                  borderRadius: 6,
+                  padding: "2px 6px",
+                  margin: 4,
+                  border: "1px solid #ddd",
+                }}
+              >
+                {tag}
+              </span>
+            ))}
+          </span>
         </p>
-        <div>
-          {tags.map(tag => (
-            <div
-              key={tag}
-              style={{
-                backgroundColor: "pink",
-                borderRadius: "6",
-                color: "white",
-              }}
-            >
-              {tag}
-            </div>
-          ))}
-        </div>
         <hr />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
@@ -107,9 +111,12 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
-        authors
-        pdflink
-        link
+        tags
+        paper_title
+        paper_date
+        paper_authors
+        paper_pdf
+        paper_link
       }
     }
   }

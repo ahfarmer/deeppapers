@@ -1,13 +1,15 @@
 ---
 title: Rethinking ImageNet Pre-training
-date: "2018-11-24T04:24:51.671Z"
-authors: "Kaiming He, Ross Girshick, Piotr Dollár"
-link: https://arxiv.org/abs/1811.08883
-pdflink: https://arxiv.org/pdf/1811.08883
+date: "2018-11-23T04:24:51.671Z"
 tags: "vision"
+paper_title: Rethinking ImageNet Pre-training
+paper_date: "2018-11-21"
+paper_authors: "Kaiming He, Ross Girshick, Piotr Dollár"
+paper_link: https://arxiv.org/abs/1811.08883
+paper_pdf: https://arxiv.org/pdf/1811.08883
 ---
 
-Comparison between using a network pretrained on ImageNet vs starting a new net with random weights.
+This paper is a comparison between using a network pretrained on ImageNet vs starting a new net with random weights.
 
 *Bottom line:* For segmentation problems, networks trained from scratch perform just as well as networks pretrained on ImageNet, as long as both networks get the same amount of total training time.
 
