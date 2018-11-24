@@ -4,6 +4,7 @@ date: "2018-11-24T04:24:51.671Z"
 authors: "Kaiming He, Ross Girshick, Piotr Dollár"
 link: https://arxiv.org/abs/1811.08883
 pdflink: https://arxiv.org/pdf/1811.08883
+tags: "vision"
 ---
 
 Comparison between using a network pretrained on ImageNet vs starting a new net with random weights.
