@@ -1,7 +1,7 @@
 ---
 title: CGNet
 date: "2018-11-24T04:24:51.671Z"
-tags: "vision, mobile"
+tags: "segmentation, mobile, vision"
 paper_title: "CGNet: A Light-weight Context Guided Network for Semantic Segmentation"
 paper_date: "2018-11-20"
 paper_authors: "Tianyi Wu, Sheng Tang, Rui Zhang, Yongdong Zhang"
