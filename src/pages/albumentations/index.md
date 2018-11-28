@@ -29,3 +29,5 @@ I've noticed a lot of recent papers on data augmentation.
 Three out of the top four papers on the [CIFAR benchmark](https://benchmarks.ai/cifar-10) are mainly talking about data augmentation, including the top result.
 
 In fact, that top result, "AutoAugment" kind of crushed the state of the art result before it. They achieved this by using reinforcement learning to search for the best data augmentations. Sounds like it would take a ton of GPU processing power, which is unsurprising since it is a Google Brain paper.
+
+[This paper](https://arxiv.org/abs/1811.09030) also just came out a few days ago and what they are doing seems insane. They get good CIFAR results by cutting and pasting 4 separate training images together. They claim 2.19% error which would put them near the top of the CIFAR benchmark but not as good as that Google Brain paper.
